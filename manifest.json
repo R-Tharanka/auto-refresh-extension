@@ -20,7 +20,7 @@
       "https://*/*"
     ],
     "icons": {
-      "48": "icon.png"
+      "48": "icons/icon.png"
     },
     "content_scripts": [
       {

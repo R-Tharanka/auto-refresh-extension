@@ -7,10 +7,50 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            margin: 0;
+
+            color: #fff;
+            background-color: #000;
+            border: 6px solid #00897b;
+        }
+        #input_sec_2{
+            margin-top: 5px;
+        }
+        #action_btn_div{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
         }
         input, button {
             margin: 5px;
+        }
+        input{
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #00897b;
+        }
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+
+            background-color: #000;
+        }
+        button:hover{
+            background-color: #00897b;
+        }
+        .action_icon{
+            width: 25px;
+            height: auto;
         }
         #status {
             margin-top: 10px;
@@ -19,34 +59,49 @@
         .support {
             margin-top: 10px;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
         }
         .support img {
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: auto;
             cursor: pointer;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
     <h1>Tab Refresher</h1>
-    <div>
+    <div id="input_sec_1">
         <label for="refreshTime">Refresh Interval (ms):</label>
         <input type="number" id="refreshTime" value="5000" min="1000">
     </div>
-    <div>
+    <div id="input_sec_2">
         <label for="refreshCount">Refresh Count:</label>
         <input type="number" id="refreshCount" value="10" min="1">
     </div>
-    <div>
-        <button id="startBtn">Start Refresh</button>
-        <button id="stopBtn">Stop Refresh</button>
-        <button id="pauseBtn">Pause Refresh</button>
-        <button id="resumeBtn">Resume Refresh</button>
+    <div id="action_btn_div">
+        <button id="startBtn" title="Start Refresh">
+            <img class="action_icon" src="icons/start.png" alt="Start Refresh">
+        </button>
+        <button id="stopBtn" title="Stop Refresh">
+            <img class="action_icon" src="icons/stop.png" alt="Stop Refresh">
+        </button>
+        <button id="pauseBtn" title="Pause Refresh">
+            <img class="action_icon" src="icons/pause.png" alt="Pause Refresh">
+        </button>
+        <button id="resumeBtn" title="Resume Refresh">
+            <img class="action_icon" src="icons/resume.png" alt="Resume Refresh">
+        </button>
     </div>
     <div id="status"></div>
     <div class="support">
         <p>Need help?</p>
-        <img id="feedbackIcon" src="support-icon.png" alt="Support">
+        <!-- <a target="_blank" href=""> -->
+            <img id="feedbackIcon" src="icons/support-icon.png" alt="Support" title="support & feedback">
+        <!-- </a> -->
     </div>        
     <script src="popup.js"></script>
 </body>
