@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Support</h1>
+
+    <div class="section" id="extensionDetails">
+        <h2>About This Extension</h2>
+        <p><strong>Name:</strong> My Extension</p>
+        <p><strong>Version:</strong> 1.0.0</p>
+        <p><strong>Description:</strong> This extension helps you manage tasks efficiently and improve productivity.</p>
+    </div>
+
+    <div class="section" id="feedbackFormSection">
+        <h2>Send Us Your Feedback</h2>
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="5" placeholder="Your Feedback" required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p id="status"></p>
+    </div>
+
+    <div class="section" id="additionalResources">
+        <h2>Additional Resources</h2>
+        <p><a href="faq.html" target="_blank">Frequently Asked Questions</a></p>
+        <p><a href="https://support.example.com" target="_blank">Visit our Support Site</a></p>
+    </div>
+
+    <script src="support.js"></script>
+</body>
+</html>

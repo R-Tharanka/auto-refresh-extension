@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tab Refresher</title>
     <style>
-        /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
             padding: 10px;
         }
-        input {
-            margin: 5px;
-        }
-        button {
+        input, button {
             margin: 5px;
         }
         #status {
             margin-top: 10px;
             font-weight: bold;
+        }
+        .support {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .support img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -39,6 +44,10 @@
         <button id="resumeBtn">Resume Refresh</button>
     </div>
     <div id="status"></div>
+    <div class="support">
+        <p>Need help?</p>
+        <img id="feedbackIcon" src="support-icon.png" alt="Support">
+    </div>        
     <script src="popup.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Auto Refresh Extension",
     "description": "Automatically refresh a page with customizable settings.",
-    "version": "1.2",
+    "version": "1.0.0",
     "permissions": [
       "tabs",
       "activeTab",
