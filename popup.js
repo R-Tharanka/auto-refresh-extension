@@ -2,7 +2,10 @@ document.getElementById("startBtn").addEventListener("click", () => {
     const refreshTime = document.getElementById("refreshTime").value || 5000;
     const refreshCount = document.getElementById("refreshCount").value || 10;
 
-    chrome.storage.sync.set({ refreshTime: parseInt(refreshTime), refreshCount: parseInt(refreshCount) });
+    chrome.storage.sync.set({
+        refreshTime: parseInt(refreshTime),
+        refreshCount: parseInt(refreshCount),
+    });
 
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.runtime.sendMessage({
@@ -48,7 +51,6 @@ document.getElementById("resumeBtn").addEventListener("click", () => {
 document.getElementById("feedbackIcon").addEventListener("click", () => {
     chrome.tabs.create({ url: chrome.runtime.getURL("support.html") });
 });
-
 
 // Load settings from chrome storage on popup open
 chrome.storage.sync.get(["refreshTime", "refreshCount"], (data) => {
