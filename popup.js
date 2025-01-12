@@ -48,9 +48,13 @@ document.getElementById("resumeBtn").addEventListener("click", () => {
 });
 
 // Feedback icon click handler
+const backendUrl = 'http://127.0.0.1:8000/'; // Replace with your deployed backend URL
+
 document.getElementById("feedbackIcon").addEventListener("click", () => {
-    chrome.tabs.create({ url: chrome.runtime.getURL("support.html") });
+    chrome.tabs.create({ url: `${backendUrl}/feedback/` });
 });
+
+
 
 // Load settings from chrome storage on popup open
 chrome.storage.sync.get(["refreshTime", "refreshCount"], (data) => {
