@@ -87,10 +87,3 @@ You can modify the default settings in the following files:
 - The extension cannot refresh certain Chrome system pages (URLs starting with `chrome://` or `edge://`)
 - For security reasons, some pages may restrict script execution
 
-## License
-
-[MIT License](LICENSE)
-
-## Contributors
-
-- [R-Tharanka](https://github.com/R-Tharanka)
